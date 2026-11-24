@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AGR Records — Music Platform</title>
+<style>
+:root{--gold:#d4af37;--bg:#101010;--panel:#242424;--white:#f7f7f7;--muted:#aaa}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--white);font-family:Arial,Helvetica,sans-serif}
+header{padding:28px 22px 18px;max-width:1100px;margin:auto}
+h1{margin:0;color:var(--gold);font-size:clamp(32px,7vw,52px);letter-spacing:.5px}
+.sub{font-size:20px;font-weight:bold;margin-top:8px}
+.hero{max-width:1100px;margin:0 auto;padding:10px 22px 28px}
+.banner{border:1px solid #393939;background:linear-gradient(135deg,#222,#090909);border-radius:22px;padding:28px 22px}
+.banner h2{color:var(--gold);font-size:clamp(22px,5vw,38px);margin:0 0 12px}
+.banner p{font-size:18px;line-height:1.6;margin:0}
+nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:1100px;margin:0 auto;padding:0 22px 22px}
+nav button,.tile{background:var(--panel);border:1px solid #333;border-radius:20px;color:white;padding:22px 16px;text-align:left;cursor:pointer}
+nav button:hover,.tile:hover{border-color:var(--gold)}
+nav button .ico{color:var(--gold);font-size:28px;display:block;margin-bottom:8px}
+nav button strong{font-size:20px}
+main{max-width:1100px;margin:auto;padding:0 22px 40px}
+.section{display:none}.section.active{display:block}
+h3{color:var(--gold);font-size:24px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.tile h4{font-size:19px;margin:4px 0 8px}.tile p{color:var(--muted);margin:0}
+.tile .play{color:var(--gold);font-size:28px}
+input,textarea{width:100%;background:#171717;border:1px solid #555;color:white;padding:12px;border-radius:10px;margin:6px 0}
+button.action{background:var(--gold);color:#111;font-weight:bold;border:0;border-radius:10px;padding:12px 18px;cursor:pointer;margin:6px 0}
+footer{border-top:1px solid #333;padding:22px;text-align:center;color:var(--muted)}
+small{color:var(--muted)}
+</style></head>
+<body>
+<header><h1>AGR RECORDS</h1><div class="sub">MUSIC PLATFORM</div></header>
+<div class="hero"><div class="banner"><h2>ONE KING. MANY NATIONS.</h2><p>Prepare o caminho. Aqui só tocamos as melhores.</p></div></div>
+<nav>
+<button onclick="show('musicas')"><span class="ico">♫</span><strong>Músicas</strong></button>
+<button onclick="show('artistas')"><span class="ico">♙♙</span><strong>Artistas</strong></button>
+<button onclick="show('albuns')"><span class="ico">◉</span><strong>Álbuns</strong></button>
+<button onclick="show('videos')"><span class="ico">▣</span><strong>Vídeos</strong></button>
+</nav>
+<main>
+<section id="musicas" class="section active"><h3>♫ Catálogo musical</h3><div class="cards">
+<div class="tile"><span class="play">♫</span><h4>Lá Noche</h4><p>Véra Blues</p><small>Adicionar link de áudio para ouvir</small></div>
+<div class="tile"><span class="play">♫</span><h4>Ainda penso nela</h4><p>DNA da Sofrência</p><small>Adicionar link de áudio para ouvir</small></div>
+<div class="tile"><span class="play">♫</span><h4>Tu acenderás minhas candeias</h4><p>Eliara</p><small>Adicionar link de áudio para ouvir</small></div>
+</div></section>
+<section id="artistas" class="section"><h3>♙ Artistas AGR</h3><div class="cards">
+<div class="tile"><h4>Véra Blues</h4><p>Blues, noite e emoção</p></div><div class="tile"><h4>DNA da Sofrência</h4><p>Romance e sofrência</p></div><div class="tile"><h4>Eliara</h4><p>Música gospel</p></div><div class="tile"><h4>Mariza</h4><p>DNA da Sofrência</p></div><div class="tile"><h4>Vanessa Kelly</h4><p>Projeto AGR Records</p></div></div></section>
+<section id="albuns" class="section"><h3>◉ Álbuns</h3><div class="tile"><h4>Álbuns e coleções</h4><p>Em breve — catálogo em expansão.</p></div></section>
+<section id="videos" class="section"><h3>▣ Vídeos</h3><div class="tile"><h4>Videoteca AGR Records</h4><p>Em breve — links de vídeos serão adicionados.</p></div></section>
+</main>
+<footer>AGR RECORDS · ONE KING. MANY NATIONS.<br><small>Protótipo inicial — links e catálogo podem ser atualizados nas próximas versões.</small></footer>
+<script>function show(id){document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo({top:0,behavior:'smooth'})}</script>
+</body></html>
